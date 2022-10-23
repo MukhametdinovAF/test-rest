@@ -8,7 +8,7 @@ public class SenderMessage implements MessageSender{
     @Override
     public Response send(Response response) {
         RestTemplate restTemplate = new RestTemplate();
-        String web = "http://localhost:8080/feed";
+        String web = "http://localhost:8082/feed";
         restTemplate.postForLocation(web,response);
         return response;
     }

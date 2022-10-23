@@ -8,10 +8,6 @@ public class CreateLog implements LogService{
 
     @Override
     public void createLog(Logger logger) {
-        logger.trace("This is TRACE");
-        logger.debug("This is DEBUG");
-        logger.info("This is INFO");
-        logger.warn("This is WARN");
-        logger.error("This is ERROR");
+        logger.info("Cообщение получено и обработано!");
     }
 }

@@ -1,6 +1,7 @@
 package ru.mukhametdinov.testrestlab.controller;
 
 
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,16 +17,14 @@ import ru.mukhametdinov.testrestlab.service.LogService;
 import ru.mukhametdinov.testrestlab.service.MessageSender;
 import ru.mukhametdinov.testrestlab.service.MyService;
 
+@Slf4j
 @RestController
 public class MyController {
     private final MyService myService;
     private final MessageSender messageSender;
 
     private final Logger log = LoggerFactory.getLogger(MyController.class);
-
     private final LogService logService;
-
-
 
     @Autowired
     public MyController (@Qualifier("ModifyUid")MyService myService, MessageSender messageSender, LogService logService){
@@ -35,6 +34,9 @@ public class MyController {
     }
     @PostMapping(value = "/feedback")
     public ResponseEntity<Response> feedback (@RequestBody Request request){
+
+        log.info("Входящий request: "+String.valueOf(request));
+
         Response response = Response.builder()
                 .uid(request.getUid())
                 .operationUid(request.getOperationUid())
@@ -44,8 +46,12 @@ public class MyController {
                 .errorMessage("")
                 .build();
         Response afterModify = myService.execute(response);
-        Response senderMessage = messageSender.send(afterModify);
-        logService.createLog(log);
-        return new ResponseEntity<>(senderMessage, HttpStatus.OK);
+        log.info("Исходящий response: "+String.valueOf(response));
+        //Response senderMessage = messageSender.send(afterModify);
+
+        //System.out.println(response.getUid());
+
+        return new ResponseEntity<>(afterModify, HttpStatus.OK);
     }
+
 }
