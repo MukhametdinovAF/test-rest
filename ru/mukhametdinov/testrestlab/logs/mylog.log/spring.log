@@ -1,0 +1,15 @@
+2022-09-27 17:50:07.612  INFO 9248 --- [main] r.m.testrestlab.TestRestLabApplication   : Starting TestRestLabApplication using Java 17.0.4.1 on MagicBook with PID 9248 (C:\Users\ekb-l\IdeaProjects\test-rest-lab\target\classes started by ekb-l in C:\Users\ekb-l\IdeaProjects\test-rest-lab)
+2022-09-27 17:50:07.615  INFO 9248 --- [main] r.m.testrestlab.TestRestLabApplication   : No active profile set, falling back to 1 default profile: "default"
+2022-09-27 17:50:08.514  INFO 9248 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-09-27 17:50:08.525  INFO 9248 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-09-27 17:50:08.526  INFO 9248 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-27 17:50:08.620  INFO 9248 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-09-27 17:50:08.620  INFO 9248 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 947 ms
+2022-09-27 17:50:08.994  INFO 9248 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-09-27 17:50:09.006  INFO 9248 --- [main] r.m.testrestlab.TestRestLabApplication   : Started TestRestLabApplication in 1.85 seconds (JVM running for 2.526)
+2022-09-27 17:50:13.955  INFO 9248 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-27 17:50:13.955  INFO 9248 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-09-27 17:50:13.956  INFO 9248 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-09-27 17:50:14.118  INFO 9248 --- [http-nio-8081-exec-1] r.m.testrestlab.controller.MyController  : This is INFO
+2022-09-27 17:50:14.119  WARN 9248 --- [http-nio-8081-exec-1] r.m.testrestlab.controller.MyController  : This is WARN
+2022-09-27 17:50:14.119 ERROR 9248 --- [http-nio-8081-exec-1] r.m.testrestlab.controller.MyController  : This is ERROR

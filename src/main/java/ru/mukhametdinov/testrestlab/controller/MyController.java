@@ -22,8 +22,6 @@ import ru.mukhametdinov.testrestlab.service.MyService;
 public class MyController {
     private final MyService myService;
     private final MessageSender messageSender;
-
-    private final Logger log = LoggerFactory.getLogger(MyController.class);
     private final LogService logService;
 
     @Autowired
